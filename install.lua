@@ -1,0 +1,5 @@
+shell.run("wget https://raw.githubusercontent.com/NickMous/chest_analyzer/main/chest_monitor.lua")
+local startup = fs.open("startup.lua", "w")
+startup.write("dofile(\"chest_monitor.lua\")")
+startup.close()
+shell.run("reboot")
